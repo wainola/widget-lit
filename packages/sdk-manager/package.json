@@ -1,0 +1,27 @@
+{
+  "name": "@wainola/sdk-manager",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "module": "build/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc --build --clean && tsc --build ./tsconfig.json",
+    "watch": "tsc --build --clean --watch && tsc --build ./tsconfig.json --watch",
+    "lint": "eslint 'src/**/*.ts'",
+    "lint:fix": "yarn run lint --fix"
+  },
+  "devDependencies": {
+    "@polkadot/types": "10.7.2",
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.6.0",
+    "eslint": "^8.48.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-lit": "^1.9.1",
+    "eslint-plugin-wc": "^1.5.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@buildwithsygma/sygma-sdk-core": "^2.2.0",
+    "@polkadot/api": "10.7.2"
+  }
+}
