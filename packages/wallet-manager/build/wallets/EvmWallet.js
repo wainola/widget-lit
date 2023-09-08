@@ -1,8 +1,8 @@
-import { ethers } from "ethers";
+import { ethers } from 'ethers';
 class EvmWallet {
     connect() {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        if (typeof window.ethereum !== "undefined") {
+        if (typeof window.ethereum !== 'undefined') {
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             this.metamask = window.ethereum;
             this.provider = new ethers.providers.Web3Provider(this.metamask);
@@ -10,7 +10,9 @@ class EvmWallet {
     }
     async getAccount() {
         if (this.metamask) {
-            const accounts = await this.metamask.request({ method: 'eth_requestAccounts' });
+            const accounts = await this.metamask.request({
+                method: 'eth_requestAccounts'
+            });
             this.account = accounts[0];
         }
     }

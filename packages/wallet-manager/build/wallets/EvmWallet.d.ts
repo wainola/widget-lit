@@ -1,4 +1,4 @@
-import { ethers } from "ethers";
+import { ethers } from 'ethers';
 declare class EvmWallet {
     private metamask;
     private account;
