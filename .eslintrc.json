@@ -28,7 +28,7 @@
         "exceptMethods": ["render", "update"]
       }
     ],
-    "no-console": ["error", { "allow": ["error"] }],
+    "no-console": ["warn", { "allow": ["warn"] }],
     "no-param-reassign": "off",
     "no-plusplus": "off",
     "no-underscore-dangle": "off",
