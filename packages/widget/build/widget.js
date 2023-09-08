@@ -7,21 +7,56 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 import { LitElement, html } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import { EvmWallet } from '@wainola/wallet-manager';
+import { SDKController } from '@wainola/sdk-manager';
 let Widget = class Widget extends LitElement {
     constructor() {
         super();
         this.widgetApp = 'The Widget';
         this.evmAccount = '';
         this.evmBalance = '';
+        this.amountToTransfer = '';
+        this.addressToTransfer = '';
         this.evmWallet = new EvmWallet();
+        this.sdkController = new SDKController(this, this.evmWallet);
     }
     async _connectoToEvm() {
-        console.log("Connecting to EVM");
+        console.log('Connecting to EVM');
         this.evmWallet?.connect();
         await this.evmWallet?.getAccount();
         await this.evmWallet?.getBalance();
         this.evmAccount = this.evmWallet?.currentAccount;
         this.evmBalance = this.evmWallet?.currentBalance;
+        await this.sdkController?.createEvmAssetTransfer();
+        console.log('Asset transfer', this.sdkController?.evmAssetTransfer);
+    }
+    handleChange(event) {
+        const target = event.target;
+        const { name, value } = target;
+        switch (name) {
+            case 'amount':
+                this.amountToTransfer = value;
+                break;
+            case 'address':
+                this.addressToTransfer = value;
+                break;
+            default:
+                break;
+        }
+    }
+    handleCheck(event) {
+        const target = event.target;
+        const { checked } = target;
+        if (checked) {
+            this.addressToTransfer = this.evmAccount;
+            console.log('Address to transfer', this.addressToTransfer);
+        }
+        else {
+            this.addressToTransfer = '';
+        }
+    }
+    async handleSubmit(event) {
+        event.preventDefault();
+        console.log('Submitting', this.amountToTransfer, this.addressToTransfer);
     }
     render() {
         return html `
@@ -30,8 +65,47 @@ let Widget = class Widget extends LitElement {
 
         <div>
           <button @click=${this._connectoToEvm}>Connect to EVM</button>
-          <p>Account connected: ${this.evmAccount !== '' ? this.evmAccount : 'No account connected'}</p>
-          <p>Balance: ${this.evmBalance !== '' ? this.evmBalance : 'No balance'}</p>
+          <p>
+            Account connected:
+            ${this.evmAccount !== '' ? this.evmAccount : 'No account connected'}
+          </p>
+          <p>
+            Balance: ${this.evmBalance !== '' ? this.evmBalance : 'No balance'}
+          </p>
+        </div>
+        <div>
+          <form @submit=${this.handleSubmit}>
+            <div>
+              <label for="amount">Amount</label>
+              <input
+                type="text"
+                placeholder="Enter amount to transfer"
+                name="amount"
+                @change=${this.handleChange}
+              />
+            </div>
+            <div>
+              <label for="address">Address</label>
+              <input
+                type="text"
+                placeholder="Enter address to transfer"
+                name="address"
+                value=${this.addressToTransfer}
+              />
+            </div>
+            <div>
+              <label for="checkbox">Use same connected address</label>
+              <input
+                type="checkbox"
+                name="checkbox"
+                @change=${this.handleCheck}
+              />
+            </div>
+            <div>
+              <button type="submit">Transfer</button>
+            </div>
+          </form>
+        </div>
       </div>
     `;
     }
@@ -43,17 +117,33 @@ __decorate([
     state()
 ], Widget.prototype, "evmWallet", void 0);
 __decorate([
-    property({ type: String, hasChanged: (oldValue, newValue) => {
+    property({
+        type: String,
+        hasChanged: (oldValue, newValue) => {
             console.log(oldValue, newValue);
             return oldValue !== newValue;
-        } })
+        }
+    })
 ], Widget.prototype, "evmAccount", void 0);
 __decorate([
-    property({ type: String, hasChanged: (oldValue, newValue) => {
+    property({
+        type: String,
+        hasChanged: (oldValue, newValue) => {
             console.log(oldValue, newValue);
             return oldValue !== newValue;
-        } })
+        }
+    })
 ], Widget.prototype, "evmBalance", void 0);
+__decorate([
+    property({
+        type: String
+    })
+], Widget.prototype, "amountToTransfer", void 0);
+__decorate([
+    property({
+        type: String
+    })
+], Widget.prototype, "addressToTransfer", void 0);
 Widget = __decorate([
     customElement('widget-test')
 ], Widget);

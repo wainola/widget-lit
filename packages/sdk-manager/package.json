@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc --build --clean && tsc --build ./tsconfig.json",
-    "watch": "tsc --build --clean --watch && tsc --build ./tsconfig.json --watch",
+    "watch": "tsc --build --clean && tsc --build ./tsconfig.json --watch",
     "lint": "eslint 'src/**/*.ts'",
     "lint:fix": "yarn run lint --fix",
     "clean": "rm -rf build"

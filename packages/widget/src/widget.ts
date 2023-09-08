@@ -1,6 +1,7 @@
 import { LitElement, html } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import { EvmWallet } from '@wainola/wallet-manager';
+import { SDKController } from '@wainola/sdk-manager';
 
 @customElement('widget-test')
 export class Widget extends LitElement {
@@ -10,9 +11,12 @@ export class Widget extends LitElement {
   @state()
   evmWallet: EvmWallet | undefined;
 
+  sdkController: SDKController | undefined;
+
   constructor() {
     super();
     this.evmWallet = new EvmWallet();
+    this.sdkController = new SDKController(this, this.evmWallet);
   }
 
   @property({
@@ -33,6 +37,16 @@ export class Widget extends LitElement {
   })
   evmBalance: string = '';
 
+  @property({
+    type: String
+  })
+  amountToTransfer = '';
+
+  @property({
+    type: String
+  })
+  addressToTransfer = '';
+
   private async _connectoToEvm() {
     console.log('Connecting to EVM');
     this.evmWallet?.connect();
@@ -42,6 +56,40 @@ export class Widget extends LitElement {
 
     this.evmAccount = this.evmWallet?.currentAccount as string;
     this.evmBalance = this.evmWallet?.currentBalance as string;
+
+    await this.sdkController?.createEvmAssetTransfer();
+    console.log('Asset transfer', this.sdkController?.evmAssetTransfer);
+  }
+
+  private handleChange(event: Event) {
+    const target = event.target as HTMLInputElement;
+    const { name, value } = target;
+    switch (name) {
+      case 'amount':
+        this.amountToTransfer = value;
+        break;
+      case 'address':
+        this.addressToTransfer = value;
+        break;
+      default:
+        break;
+    }
+  }
+
+  private handleCheck(event: Event) {
+    const target = event.target as HTMLInputElement;
+    const { checked } = target;
+    if (checked) {
+      this.addressToTransfer = this.evmAccount as string;
+      console.log('Address to transfer', this.addressToTransfer);
+    } else {
+      this.addressToTransfer = '';
+    }
+  }
+
+  private async handleSubmit(event: Event) {
+    event.preventDefault();
+    console.log('Submitting', this.amountToTransfer, this.addressToTransfer);
   }
 
   render() {
@@ -58,6 +106,39 @@ export class Widget extends LitElement {
           <p>
             Balance: ${this.evmBalance !== '' ? this.evmBalance : 'No balance'}
           </p>
+        </div>
+        <div>
+          <form @submit=${this.handleSubmit}>
+            <div>
+              <label for="amount">Amount</label>
+              <input
+                type="text"
+                placeholder="Enter amount to transfer"
+                name="amount"
+                @change=${this.handleChange}
+              />
+            </div>
+            <div>
+              <label for="address">Address</label>
+              <input
+                type="text"
+                placeholder="Enter address to transfer"
+                name="address"
+                value=${this.addressToTransfer}
+              />
+            </div>
+            <div>
+              <label for="checkbox">Use same connected address</label>
+              <input
+                type="checkbox"
+                name="checkbox"
+                @change=${this.handleCheck}
+              />
+            </div>
+            <div>
+              <button type="submit">Transfer</button>
+            </div>
+          </form>
         </div>
       </div>
     `;
