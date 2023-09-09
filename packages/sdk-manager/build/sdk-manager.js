@@ -22,5 +22,17 @@ class SDKController {
             this.evmAssetTransfer = await createEvmAssetTransfer(this.evmWallet);
         }
     }
+    async createFungibleTransfer(address, destinationChainId, destinationAddress, resourceId, amount) {
+        const transfer = await this.evmAssetTransfer?.createFungibleTransfer(address, destinationChainId, destinationAddress, resourceId, amount);
+        return transfer;
+    }
+    async getFee(transfer) {
+        const fee = await this.evmAssetTransfer?.getFee(transfer);
+        return fee;
+    }
+    async buildApprovals(transfer, fee) {
+        const approvals = await this.evmAssetTransfer?.buildApprovals(transfer, fee);
+        return approvals;
+    }
 }
 export default SDKController;

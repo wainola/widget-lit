@@ -2,11 +2,23 @@ import { LitElement, html } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import { EvmWallet } from '@wainola/wallet-manager';
 import { SDKController } from '@wainola/sdk-manager';
+// import { ethers } from 'ethers';
 
 @customElement('widget-test')
 export class Widget extends LitElement {
-  @property({ type: String })
-  widgetApp: string = 'The Widget';
+  @property({
+    type: String,
+    converter: (value: string | null) => {
+      return value || null;
+    }
+  })
+  widgetApp?: string;
+
+  @property({
+    type: String,
+    converter: (value: string | null) => value || null
+  })
+  providerUrl?: string;
 
   @state()
   evmWallet: EvmWallet | undefined;
@@ -17,10 +29,10 @@ export class Widget extends LitElement {
     super();
     this.evmWallet = new EvmWallet();
     this.sdkController = new SDKController(this, this.evmWallet);
+    console.log('property widgetApp', this.widgetApp);
   }
 
-  @property({
-    type: String,
+  @state({
     hasChanged: (oldValue: string, newValue: string) => {
       console.log(oldValue, newValue);
       return oldValue !== newValue;
@@ -28,8 +40,7 @@ export class Widget extends LitElement {
   })
   evmAccount: string = '';
 
-  @property({
-    type: String,
+  @state({
     hasChanged: (oldValue: string, newValue: string) => {
       console.log(oldValue, newValue);
       return oldValue !== newValue;
@@ -37,15 +48,18 @@ export class Widget extends LitElement {
   })
   evmBalance: string = '';
 
-  @property({
-    type: String
-  })
+  @state()
   amountToTransfer = '';
 
-  @property({
-    type: String
-  })
+  @state()
   addressToTransfer = '';
+
+  @state()
+  sepoliaChainId = '11155111';
+
+  @state()
+  resourceId =
+    '0x0000000000000000000000000000000000000000000000000000000000000300';
 
   private async _connectoToEvm() {
     console.log('Connecting to EVM');

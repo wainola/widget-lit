@@ -8,16 +8,19 @@ import { LitElement, html } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import { EvmWallet } from '@wainola/wallet-manager';
 import { SDKController } from '@wainola/sdk-manager';
+// import { ethers } from 'ethers';
 let Widget = class Widget extends LitElement {
     constructor() {
         super();
-        this.widgetApp = 'The Widget';
         this.evmAccount = '';
         this.evmBalance = '';
         this.amountToTransfer = '';
         this.addressToTransfer = '';
+        this.sepoliaChainId = '11155111';
+        this.resourceId = '0x0000000000000000000000000000000000000000000000000000000000000300';
         this.evmWallet = new EvmWallet();
         this.sdkController = new SDKController(this, this.evmWallet);
+        console.log('property widgetApp', this.widgetApp);
     }
     async _connectoToEvm() {
         console.log('Connecting to EVM');
@@ -111,14 +114,24 @@ let Widget = class Widget extends LitElement {
     }
 };
 __decorate([
-    property({ type: String })
+    property({
+        type: String,
+        converter: (value) => {
+            return value || null;
+        }
+    })
 ], Widget.prototype, "widgetApp", void 0);
+__decorate([
+    property({
+        type: String,
+        converter: (value) => value || null
+    })
+], Widget.prototype, "providerUrl", void 0);
 __decorate([
     state()
 ], Widget.prototype, "evmWallet", void 0);
 __decorate([
-    property({
-        type: String,
+    state({
         hasChanged: (oldValue, newValue) => {
             console.log(oldValue, newValue);
             return oldValue !== newValue;
@@ -126,8 +139,7 @@ __decorate([
     })
 ], Widget.prototype, "evmAccount", void 0);
 __decorate([
-    property({
-        type: String,
+    state({
         hasChanged: (oldValue, newValue) => {
             console.log(oldValue, newValue);
             return oldValue !== newValue;
@@ -135,15 +147,17 @@ __decorate([
     })
 ], Widget.prototype, "evmBalance", void 0);
 __decorate([
-    property({
-        type: String
-    })
+    state()
 ], Widget.prototype, "amountToTransfer", void 0);
 __decorate([
-    property({
-        type: String
-    })
+    state()
 ], Widget.prototype, "addressToTransfer", void 0);
+__decorate([
+    state()
+], Widget.prototype, "sepoliaChainId", void 0);
+__decorate([
+    state()
+], Widget.prototype, "resourceId", void 0);
 Widget = __decorate([
     customElement('widget-test')
 ], Widget);

@@ -1,6 +1,9 @@
 import {
   EVMAssetTransfer,
-  SubstrateAssetTransfer
+  EvmFee,
+  Fungible,
+  SubstrateAssetTransfer,
+  Transfer
 } from '@buildwithsygma/sygma-sdk-core';
 import { ReactiveController, ReactiveControllerHost } from 'lit';
 import { EvmWallet, SubstrateWallet } from 'packages/wallet-manager/build';
@@ -44,6 +47,40 @@ class SDKController implements ReactiveController {
     if (this.evmWallet) {
       this.evmAssetTransfer = await createEvmAssetTransfer(this.evmWallet);
     }
+  }
+
+  async createFungibleTransfer(
+    address: string,
+    destinationChainId: number,
+    destinationAddress: string,
+    resourceId: string,
+    amount: string
+  ): Promise<Transfer<Fungible>> {
+    const transfer = await this.evmAssetTransfer?.createFungibleTransfer(
+      address,
+      destinationChainId,
+      destinationAddress,
+      resourceId,
+      amount
+    );
+
+    return transfer as Transfer<Fungible>;
+  }
+
+  async getFee(transfer: Transfer<Fungible>): Promise<EvmFee> {
+    const fee = await this.evmAssetTransfer?.getFee(transfer);
+    return fee as EvmFee;
+  }
+
+  async buildApprovals(
+    transfer: Transfer<Fungible>,
+    fee: EvmFee
+  ): Promise<unknown[]> {
+    const approvals = await this.evmAssetTransfer?.buildApprovals(
+      transfer,
+      fee
+    );
+    return approvals as unknown[];
   }
 }
 
