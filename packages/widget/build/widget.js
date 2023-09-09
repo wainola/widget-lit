@@ -21,17 +21,14 @@ let Widget = class Widget extends LitElement {
         this.sendingApprovals = false;
         this.evmWallet = new EvmWallet();
         this.sdkController = new SDKController(this, this.evmWallet);
-        console.log('property widgetApp', this.widgetApp);
     }
     async _connectoToEvm() {
-        console.log('Connecting to EVM');
         this.evmWallet?.connect();
         await this.evmWallet?.getAccount();
         await this.evmWallet?.getBalance();
         this.evmAccount = this.evmWallet?.currentAccount;
         this.evmBalance = this.evmWallet?.currentBalance;
         await this.sdkController?.createEvmAssetTransfer();
-        console.log('Asset transfer', this.sdkController?.evmAssetTransfer);
     }
     handleChange(event) {
         const target = event.target;
@@ -52,7 +49,6 @@ let Widget = class Widget extends LitElement {
         const { checked } = target;
         if (checked) {
             this.addressToTransfer = this.evmAccount;
-            console.log('Address to transfer', this.addressToTransfer);
         }
         else {
             this.addressToTransfer = '';
@@ -60,11 +56,9 @@ let Widget = class Widget extends LitElement {
     }
     async handleSubmit(event) {
         event.preventDefault();
-        console.log('Submitting', this.amountToTransfer, this.addressToTransfer);
         const parsedAmount = ethers.utils
             .parseEther(this.amountToTransfer)
             .toString();
-        console.log('Parsed amount', parsedAmount);
         const transfer = await this.sdkController?.createFungibleTransfer(this.evmAccount, this.sepoliaChainId, this.addressToTransfer, this.resourceId, parsedAmount);
         const fee = await this.sdkController?.getFee(transfer);
         const approvals = await this.sdkController?.buildApprovals(transfer, fee);
@@ -155,7 +149,6 @@ __decorate([
 __decorate([
     state({
         hasChanged: (oldValue, newValue) => {
-            console.log(oldValue, newValue);
             return oldValue !== newValue;
         }
     })
@@ -183,7 +176,6 @@ __decorate([
 __decorate([
     state({
         hasChanged: (oldValue, newValue) => {
-            console.log(oldValue, newValue);
             return oldValue !== newValue;
         }
     })
