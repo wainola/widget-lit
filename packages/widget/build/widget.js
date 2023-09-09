@@ -8,7 +8,7 @@ import { LitElement, html } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import { EvmWallet } from '@wainola/wallet-manager';
 import { SDKController } from '@wainola/sdk-manager';
-// import { ethers } from 'ethers';
+import { ethers } from 'ethers';
 let Widget = class Widget extends LitElement {
     constructor() {
         super();
@@ -16,8 +16,9 @@ let Widget = class Widget extends LitElement {
         this.evmBalance = '';
         this.amountToTransfer = '';
         this.addressToTransfer = '';
-        this.sepoliaChainId = '11155111';
+        this.sepoliaChainId = 11155111;
         this.resourceId = '0x0000000000000000000000000000000000000000000000000000000000000300';
+        this.sendingApprovals = false;
         this.evmWallet = new EvmWallet();
         this.sdkController = new SDKController(this, this.evmWallet);
         console.log('property widgetApp', this.widgetApp);
@@ -60,6 +61,24 @@ let Widget = class Widget extends LitElement {
     async handleSubmit(event) {
         event.preventDefault();
         console.log('Submitting', this.amountToTransfer, this.addressToTransfer);
+        const parsedAmount = ethers.utils
+            .parseEther(this.amountToTransfer)
+            .toString();
+        console.log('Parsed amount', parsedAmount);
+        const transfer = await this.sdkController?.createFungibleTransfer(this.evmAccount, this.sepoliaChainId, this.addressToTransfer, this.resourceId, parsedAmount);
+        const fee = await this.sdkController?.getFee(transfer);
+        const approvals = await this.sdkController?.buildApprovals(transfer, fee);
+        if (approvals !== undefined) {
+            this.sendingApprovals = true;
+            for (const approval of approvals) {
+                const response = await this.evmWallet?.sendTransaction(approval);
+                console.log('Sent approval with hash: ', response?.hash);
+            }
+            this.sendingApprovals = false;
+            const transferTx = await this.sdkController?.buildTransferTransaction(transfer, fee);
+            const response = await this.evmWallet?.sendTransaction(transferTx);
+            console.log('Sent transfer with hash: ', response?.hash);
+        }
     }
     render() {
         return html `
@@ -108,6 +127,9 @@ let Widget = class Widget extends LitElement {
               <button type="submit">Transfer</button>
             </div>
           </form>
+        </div>
+        <div>
+          <p>${this.sendingApprovals ? 'Sending approvals' : ''}</p>
         </div>
       </div>
     `;
@@ -158,6 +180,14 @@ __decorate([
 __decorate([
     state()
 ], Widget.prototype, "resourceId", void 0);
+__decorate([
+    state({
+        hasChanged: (oldValue, newValue) => {
+            console.log(oldValue, newValue);
+            return oldValue !== newValue;
+        }
+    })
+], Widget.prototype, "sendingApprovals", void 0);
 Widget = __decorate([
     customElement('widget-test')
 ], Widget);

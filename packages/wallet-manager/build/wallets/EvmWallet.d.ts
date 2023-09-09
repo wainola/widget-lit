@@ -1,4 +1,4 @@
-import { ethers } from 'ethers';
+import { UnsignedTransaction, ethers } from 'ethers';
 declare class EvmWallet {
     private metamask;
     private account;
@@ -8,6 +8,7 @@ declare class EvmWallet {
     getAccount(): Promise<void>;
     getBalance(): Promise<void>;
     getSigner(): ethers.providers.JsonRpcSigner | undefined;
+    sendTransaction(approval: UnsignedTransaction): Promise<ethers.providers.TransactionResponse> | undefined;
     get currentAccount(): string | undefined;
     get currentProvider(): ethers.providers.Web3Provider | undefined;
     get currentBalance(): string | undefined;

@@ -28,6 +28,10 @@ class EvmWallet {
             return this.provider.getSigner();
         }
     }
+    sendTransaction(approval) {
+        const signer = this.getSigner();
+        return signer?.sendTransaction(approval);
+    }
     get currentAccount() {
         return this.account;
     }

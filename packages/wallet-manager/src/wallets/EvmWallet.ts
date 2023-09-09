@@ -1,4 +1,4 @@
-import { ethers } from 'ethers';
+import { UnsignedTransaction, ethers, providers } from 'ethers';
 
 class EvmWallet {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -37,6 +37,11 @@ class EvmWallet {
     if (this.provider) {
       return this.provider.getSigner();
     }
+  }
+
+  public sendTransaction(approval: UnsignedTransaction) {
+    const signer = this.getSigner();
+    return signer?.sendTransaction(approval as providers.TransactionRequest);
   }
 
   get currentAccount() {
