@@ -12,7 +12,8 @@
     "clean": "rm -rf build"
   },
   "devDependencies": {
-    "@polkadot/types": "10.7.2"
+    "@polkadot/types": "10.7.2",
+    "typescript": "^5.2.2"
   },
   "dependencies": {
     "@buildwithsygma/sygma-sdk-core": "^2.2.0",
