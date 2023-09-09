@@ -30,12 +30,10 @@ export class Widget extends LitElement {
     super();
     this.evmWallet = new EvmWallet();
     this.sdkController = new SDKController(this, this.evmWallet);
-    console.log('property widgetApp', this.widgetApp);
   }
 
   @state({
     hasChanged: (oldValue: string, newValue: string) => {
-      console.log(oldValue, newValue);
       return oldValue !== newValue;
     }
   })
@@ -64,14 +62,12 @@ export class Widget extends LitElement {
 
   @state({
     hasChanged: (oldValue: string, newValue: string) => {
-      console.log(oldValue, newValue);
       return oldValue !== newValue;
     }
   })
   sendingApprovals: boolean = false;
 
   private async _connectoToEvm() {
-    console.log('Connecting to EVM');
     this.evmWallet?.connect();
 
     await this.evmWallet?.getAccount();
@@ -81,7 +77,6 @@ export class Widget extends LitElement {
     this.evmBalance = this.evmWallet?.currentBalance as string;
 
     await this.sdkController?.createEvmAssetTransfer();
-    console.log('Asset transfer', this.sdkController?.evmAssetTransfer);
   }
 
   private handleChange(event: Event) {
@@ -104,7 +99,6 @@ export class Widget extends LitElement {
     const { checked } = target;
     if (checked) {
       this.addressToTransfer = this.evmAccount as string;
-      console.log('Address to transfer', this.addressToTransfer);
     } else {
       this.addressToTransfer = '';
     }
@@ -112,11 +106,9 @@ export class Widget extends LitElement {
 
   private async handleSubmit(event: Event) {
     event.preventDefault();
-    console.log('Submitting', this.amountToTransfer, this.addressToTransfer);
     const parsedAmount = ethers.utils
       .parseEther(this.amountToTransfer)
       .toString();
-    console.log('Parsed amount', parsedAmount);
 
     const transfer = await this.sdkController?.createFungibleTransfer(
       this.evmAccount as string,

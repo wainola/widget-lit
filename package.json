@@ -19,5 +19,18 @@
     "eslint-plugin-wc": "^1.5.0",
     "prettier": "^3.0.3",
     "typescript": "^5.2.2"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "build:wallet-manager": "yarn workspace @wainola/wallet-manager clean && yarn workspace @wainola/wallet-manager build",
+    "build:sdk-manager": "yarn workspace @wainola/sdk-manager clean && yarn workspace @wainola/sdk-manager build",
+    "build:widget": "yarn workspace @wainola/widget clean && yarn workspace @wainola/widget build",
+    "build:all": "yarn build:wallet-manager && yarn build:sdk-manager && yarn build:widget",
+    "lint:wallet-manager": "yarn workspace @wainola/wallet-manager lint && yarn workspace @wainola/wallet-manager lint:fix",
+    "lint:sdk-manager": "yarn workspace @wainola/sdk-manager lint && yarn workspace @wainola/sdk-manager lint:fix",
+    "lint:widget": "yarn workspace @wainola/widget lint && yarn workspace @wainola/widget lint:fix",
+    "lint:all": "yarn lint:wallet-manager && yarn lint:sdk-manager && yarn lint:widget"
   }
 }
