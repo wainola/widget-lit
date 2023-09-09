@@ -1,2 +1,2 @@
-export { default as EvmWallet } from './EvmWallet';
-export { default as SubstrateWallet } from './SubstrateWallet';
+export { EvmWallet } from './Evm';
+export { Substrate } from './Substrate';

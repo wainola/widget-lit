@@ -4,7 +4,7 @@ import { formatBalance } from '@polkadot/util';
 
 formatBalance.setDefaults({ unit: 'DOT' });
 
-class SubstrateWallet {
+class Substrate {
   private substrateAccount: string | undefined;
   public api: ApiPromise | undefined;
   private wssProvider: WsProvider | undefined;
@@ -51,4 +51,4 @@ class SubstrateWallet {
   }
 }
 
-export default SubstrateWallet;
+export default Substrate;
