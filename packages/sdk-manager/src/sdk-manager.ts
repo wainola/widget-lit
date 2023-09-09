@@ -8,6 +8,8 @@ import {
 import { ReactiveController, ReactiveControllerHost } from 'lit';
 import { EvmWallet, SubstrateWallet } from 'packages/wallet-manager/build';
 import { createEvmAssetTransfer } from './sdk-utils';
+import { UnsignedTransaction } from '@ethersproject/transactions';
+import { PopulatedTransaction } from '@ethersproject/contracts';
 
 // This is a reactive controller that works as a react hook... kind of
 class SDKController implements ReactiveController {
@@ -75,12 +77,23 @@ class SDKController implements ReactiveController {
   async buildApprovals(
     transfer: Transfer<Fungible>,
     fee: EvmFee
-  ): Promise<unknown[]> {
+  ): Promise<UnsignedTransaction[]> {
     const approvals = await this.evmAssetTransfer?.buildApprovals(
       transfer,
       fee
     );
-    return approvals as unknown[];
+    return approvals as UnsignedTransaction[];
+  }
+
+  async buildTransferTransaction(
+    transfer: Transfer<Fungible>,
+    fee: EvmFee
+  ): Promise<PopulatedTransaction> {
+    const transferTx = await this.evmAssetTransfer?.buildTransferTransaction(
+      transfer,
+      fee
+    );
+    return transferTx as PopulatedTransaction;
   }
 }
 

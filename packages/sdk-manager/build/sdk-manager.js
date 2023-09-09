@@ -34,5 +34,9 @@ class SDKController {
         const approvals = await this.evmAssetTransfer?.buildApprovals(transfer, fee);
         return approvals;
     }
+    async buildTransferTransaction(transfer, fee) {
+        const transferTx = await this.evmAssetTransfer?.buildTransferTransaction(transfer, fee);
+        return transferTx;
+    }
 }
 export default SDKController;
