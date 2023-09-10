@@ -6,7 +6,7 @@ import {
   Transfer
 } from '@buildwithsygma/sygma-sdk-core';
 import { ReactiveController, ReactiveControllerHost } from 'lit';
-import { EvmWallet, SubstrateWallet } from 'packages/wallet-manager/build';
+import { EvmWallet, Substrate } from '@wainola/lit-wallet-manager';
 import { createEvmAssetTransfer } from './sdk-utils';
 import { UnsignedTransaction } from '@ethersproject/transactions';
 import { PopulatedTransaction } from '@ethersproject/contracts';
@@ -19,12 +19,12 @@ class SDKController implements ReactiveController {
   evmAssetTransfer: EVMAssetTransfer | undefined;
   substrateAssetTransfer: SubstrateAssetTransfer | undefined;
   evmWallet: EvmWallet | undefined;
-  substrateWallet: SubstrateWallet | undefined;
+  substrateWallet: Substrate | undefined;
 
   constructor(
     host: ReactiveControllerHost,
     evmWallet?: EvmWallet,
-    substrateWallet?: SubstrateWallet
+    substrateWallet?: Substrate
   ) {
     // Storing the reference to the host element
     this.host = host;

@@ -1,5 +1,5 @@
 {
-  "name": "@wainola/wallet-manager",
+  "name": "@wainola/lit-wallet-manager",
   "version": "1.0.0",
   "main": "build/index.js",
   "module": "build/index.js",

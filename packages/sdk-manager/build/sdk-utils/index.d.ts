@@ -1,5 +1,5 @@
 import { EVMAssetTransfer, SubstrateAssetTransfer } from '@buildwithsygma/sygma-sdk-core';
-import { EvmWallet, SubstrateWallet } from '@wainola/wallet-manager';
+import { EvmWallet, Substrate } from '@wainola/lit-wallet-manager';
 declare const createEvmAssetTransfer: (evmWallet: EvmWallet) => Promise<EVMAssetTransfer>;
-declare const createSubstrateAssetTransfer: (substrateWallet: SubstrateWallet) => Promise<SubstrateAssetTransfer>;
+declare const createSubstrateAssetTransfer: (substrateWallet: Substrate) => Promise<SubstrateAssetTransfer>;
 export { createEvmAssetTransfer, createSubstrateAssetTransfer };
