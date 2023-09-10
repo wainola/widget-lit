@@ -45,7 +45,7 @@ jobs:
         if: ${{ steps.release.outputs.releases_created }}
       
       - name: Install yarn
-        run: yarn set version stable
+        run: yarn set version classic
         if: ${{ steps.release.outputs.releases_created }}
 
       - name: Install dependencies
