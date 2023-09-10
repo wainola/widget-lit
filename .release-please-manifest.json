@@ -1,3 +1,4 @@
 {
-  "packages/sdk-manager": "1.0.0"
+  "packages/sdk-manager": "1.0.0",
+  "packages/wallet-manager": "1.0.0"
 }
