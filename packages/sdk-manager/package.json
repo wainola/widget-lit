@@ -1,5 +1,5 @@
 {
-  "name": "@wainola/sdk-manager",
+  "name": "@wainola/lit-sdk-manager",
   "version": "1.0.0",
   "main": "build/index.js",
   "module": "build/index.js",
