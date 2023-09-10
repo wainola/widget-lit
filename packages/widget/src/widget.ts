@@ -68,6 +68,7 @@ export class Widget extends LitElement {
   sendingApprovals: boolean = false;
 
   private async _connectoToEvm() {
+    console.log('providerUrl: ', this.providerUrl);
     this.evmWallet?.connect();
 
     await this.evmWallet?.getAccount();
