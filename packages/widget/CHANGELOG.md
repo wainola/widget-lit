@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/wainola/widget-lit/compare/lit-widget-v1.1.0...lit-widget-v1.2.0) (2023-09-10)
+
+
+### Features
+
+* logging prop ([35afaad](https://github.com/wainola/widget-lit/commit/35afaadbaeb6de25acf3c023841e5b8f1f45f31c))
+
 ## [1.1.0](https://github.com/wainola/widget-lit/compare/lit-widget-v1.0.0...lit-widget-v1.1.0) (2023-09-10)
 
 
