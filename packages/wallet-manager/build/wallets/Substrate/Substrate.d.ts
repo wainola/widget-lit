@@ -1,5 +1,5 @@
 import { ApiPromise } from '@polkadot/api';
-declare class SubstrateWallet {
+declare class Substrate {
     private substrateAccount;
     api: ApiPromise | undefined;
     private wssProvider;
@@ -11,4 +11,4 @@ declare class SubstrateWallet {
     get currentApi(): ApiPromise;
     get currentBalance(): any;
 }
-export default SubstrateWallet;
+export default Substrate;

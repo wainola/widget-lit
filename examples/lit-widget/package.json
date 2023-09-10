@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "lit": "^2.7.6",
-    "@wainola/widget": "1.0.0"
+    "@wainola/lit-widget": "1.0.0"
   },
   "devDependencies": {
     "typescript": "^5.0.2",

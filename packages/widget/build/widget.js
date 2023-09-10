@@ -6,8 +6,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { LitElement, html } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
-import { EvmWallet } from '@wainola/wallet-manager';
-import { SDKController } from '@wainola/sdk-manager';
+import { EvmWallet } from '@wainola/lit-wallet-manager';
+import { SDKController } from '@wainola/lit-sdk-manager';
 import { ethers } from 'ethers';
 let Widget = class Widget extends LitElement {
     constructor() {

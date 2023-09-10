@@ -2,7 +2,7 @@ import { ApiPromise, WsProvider } from '@polkadot/api';
 import { web3Accounts, web3Enable } from '@polkadot/extension-dapp';
 import { formatBalance } from '@polkadot/util';
 formatBalance.setDefaults({ unit: 'DOT' });
-class SubstrateWallet {
+class Substrate {
     async connect() {
         const injectors = await web3Enable('Polkadot Wallet');
         const polkadotInjector = injectors.find((injector) => injector.name === 'polkadot-js');
@@ -34,4 +34,4 @@ class SubstrateWallet {
         return this.balance;
     }
 }
-export default SubstrateWallet;
+export default Substrate;

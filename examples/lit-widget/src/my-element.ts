@@ -2,7 +2,7 @@ import { LitElement, css, html } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import litLogo from './assets/lit.svg';
 import viteLogo from '/vite.svg';
-import '@wainola/widget';
+import '@wainola/lit-widget';
 
 /**
  * An example element.
