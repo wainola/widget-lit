@@ -1,4 +1,4 @@
-name: "Semantic PR"
+name: "Lint and build"
 
 on: [pull_request]
 
