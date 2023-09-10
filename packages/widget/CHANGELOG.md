@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.0](https://github.com/wainola/widget-lit/compare/lit-widget-v1.0.0...lit-widget-v1.1.0) (2023-09-10)
+
+
+### Features
+
+* Merge pull request [#8](https://github.com/wainola/widget-lit/issues/8) from wainola/chore/update-dependency ([af358ab](https://github.com/wainola/widget-lit/commit/af358abb8b45a52068ff6976fdcd9e8e7040162c))
+* update dependency and change name of the example ([af358ab](https://github.com/wainola/widget-lit/commit/af358abb8b45a52068ff6976fdcd9e8e7040162c))
+* update dependency and change name of the example ([45404ac](https://github.com/wainola/widget-lit/commit/45404acc783d813d2811b4859047ce8d608e4d52))
+
 ## 1.0.0 (2023-09-10)
 
 
