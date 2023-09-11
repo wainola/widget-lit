@@ -2,6 +2,7 @@ import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
+import { WidgetReact } from '@wainola/react-widget'
 import { Widget } from '@wainola/lit-widget';
 import '@wainola/lit-widget';
 
@@ -37,6 +38,7 @@ function App() {
         borderRadius="5px"
         fontWeight="bold"
       ></widget-test>
+      <WidgetReact primaryColor='red' secondaryColor='blue' borderRadius='5px' fontWeight='bold' widgetApp='React version of the Widget'/>
     </>
   );
 }
