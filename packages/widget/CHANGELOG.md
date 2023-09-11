@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/wainola/widget-lit/compare/lit-widget-v1.3.0...lit-widget-v1.3.1) (2023-09-11)
+
+
+### Miscellaneous
+
+* adding new examples ([8979b87](https://github.com/wainola/widget-lit/commit/8979b877049d32cd6b6c92e2f115dae857a6a7be))
+
 ## [1.3.0](https://github.com/wainola/widget-lit/compare/lit-widget-v1.2.0...lit-widget-v1.3.0) (2023-09-11)
 
 
