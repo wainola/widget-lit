@@ -27,10 +27,12 @@
     "build:wallet-manager": "yarn workspace @wainola/lit-wallet-manager clean && yarn workspace @wainola/lit-wallet-manager build",
     "build:sdk-manager": "yarn workspace @wainola/lit-sdk-manager clean && yarn workspace @wainola/lit-sdk-manager build",
     "build:widget": "yarn workspace @wainola/lit-widget clean && yarn workspace @wainola/lit-widget build",
-    "build:all": "yarn build:wallet-manager && yarn build:sdk-manager && yarn build:widget",
+    "build:react-widget": "yarn workspace @wainola/react-widget clean && yarn workspace @wainola/react-widget build",
+    "build:all": "yarn build:wallet-manager && yarn build:sdk-manager && yarn build:widget && yarn build:react-widget",
     "lint:wallet-manager": "yarn workspace @wainola/lit-wallet-manager lint && yarn workspace @wainola/lit-wallet-manager lint:fix",
     "lint:sdk-manager": "yarn workspace @wainola/lit-sdk-manager lint && yarn workspace @wainola/lit-sdk-manager lint:fix",
     "lint:widget": "yarn workspace @wainola/lit-widget lint && yarn workspace @wainola/lit-widget lint:fix",
-    "lint:all": "yarn lint:wallet-manager && yarn lint:sdk-manager && yarn lint:widget"
+    "lint:react-widget": "yarn workspace @wainola/react-widget lint && yarn workspace @wainola/react-widget lint:fix",
+    "lint:all": "yarn lint:wallet-manager && yarn lint:sdk-manager && yarn lint:widget && yarn lint:react-widget"
   }
 }
