@@ -5,6 +5,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 import { LitElement, html } from 'lit';
+import { styleMap } from 'lit/directives/style-map.js';
 import { customElement, property, state } from 'lit/decorators.js';
 import { EvmWallet } from '@wainola/lit-wallet-manager';
 import { SDKController } from '@wainola/lit-sdk-manager';
@@ -23,6 +24,7 @@ let Widget = class Widget extends LitElement {
         this.sdkController = new SDKController(this, this.evmWallet);
     }
     async _connectoToEvm() {
+        console.log('providerUrl: ', this.providerUrl);
         this.evmWallet?.connect();
         await this.evmWallet?.getAccount();
         await this.evmWallet?.getBalance();
@@ -75,8 +77,14 @@ let Widget = class Widget extends LitElement {
         }
     }
     render() {
+        const styles = {
+            border: `2px solid ${this.primaryColor || ''}`,
+            backgroundColor: this.secondaryColor || '',
+            borderRadius: this.borderRadius || '',
+            fontWeight: this.fontWeight || ''
+        };
         return html `
-      <div>
+      <div style=${styleMap(styles)}>
         <h1>${this.widgetApp}</h1>
 
         <div>
@@ -129,6 +137,21 @@ let Widget = class Widget extends LitElement {
     `;
     }
 };
+__decorate([
+    property({
+        type: String,
+        hasChanged: (oldValue, newValue) => oldValue !== newValue
+    })
+], Widget.prototype, "primaryColor", void 0);
+__decorate([
+    property({ type: String })
+], Widget.prototype, "secondaryColor", void 0);
+__decorate([
+    property({ type: String })
+], Widget.prototype, "borderRadius", void 0);
+__decorate([
+    property({ type: String })
+], Widget.prototype, "fontWeight", void 0);
 __decorate([
     property({
         type: String,
