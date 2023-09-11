@@ -1,14 +1,14 @@
-name: Publish Lit Wallet Manager to NPM
+name: Publish Lit Widget to NPM
 
 on:
   push:
     branches:
       - main
     paths:
-      - 'packages/sdk-manager/**'
-      - '!packages/wallet-manager/**'
+      - 'packages/react/**'
       - '!packages/widget/**'
-      - '!packages/react/**'
+      - '!packages/sdk-manager/**'
+      - '!packages/wallet-manager/**'
 jobs:
   maybe-release:
     name: release
@@ -21,10 +21,10 @@ jobs:
         with:
           release-type: node
           token: ${{secrets.RELEASE_TOKEN}}
-          path: packages/sdk-manager
+          path: packages/react
           monorepo-tags: true
           default-branch: main
-          package-name: '@wainola/lit-sdk-manager'
+          package-name: '@wainola/react-widget'
           changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Bug Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false},{"type":"revert","hidden":true}]'
 
       - uses: actions/checkout@v3
@@ -53,11 +53,10 @@ jobs:
         run: yarn install
         if: ${{ steps.release.outputs.releases_created }}
 
-      - run: yarn build:sdk-manager
+      - run: yarn build:react-widget
         if: ${{ steps.release.outputs.releases_created }}
 
-      - run: npm publish --workspace=@wainola/lit-sdk-manager --access public
+      - run: npm publish --workspace=@wainola/react-widget --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         if: ${{ steps.release.outputs.releases_created }}
-

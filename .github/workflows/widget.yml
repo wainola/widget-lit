@@ -8,6 +8,7 @@ on:
       - 'packages/widget/**'
       - '!packages/sdk-manager/**'
       - '!packages/wallet-manager/**'
+      - '!packages/react/**'
 jobs:
   maybe-release:
     name: release
