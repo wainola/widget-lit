@@ -8,11 +8,7 @@ import { Transfer, Fungible, EvmFee } from '@buildwithsygma/sygma-sdk-core';
 
 @customElement('widget-test')
 export class Widget extends LitElement {
-  @property({
-    type: String,
-    hasChanged: (oldValue: string, newValue: string) => oldValue !== newValue
-  })
-  primaryColor?: string;
+  @property({ type: String }) primaryColor?: string;
   @property({ type: String }) secondaryColor?: string;
   @property({ type: String }) borderRadius?: string;
   @property({ type: String }) fontWeight?: string;

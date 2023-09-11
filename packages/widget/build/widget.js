@@ -138,10 +138,7 @@ let Widget = class Widget extends LitElement {
     }
 };
 __decorate([
-    property({
-        type: String,
-        hasChanged: (oldValue, newValue) => oldValue !== newValue
-    })
+    property({ type: String })
 ], Widget.prototype, "primaryColor", void 0);
 __decorate([
     property({ type: String })
