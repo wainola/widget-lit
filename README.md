@@ -14,6 +14,22 @@ Alternative to use it as a dependency in another project
 yarn add @wainola/lit-widget
 ```
 
+If you are using `vite vue template` copy/paste the following to the config:
+
+```typescript
+export default defineConfig({
+  plugins: [
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: (tag) => tag.includes('-')
+        }
+      }
+    })
+  ]
+});
+```
+
 ```typescript
 import '@wainola/lit-widget'
 ```
