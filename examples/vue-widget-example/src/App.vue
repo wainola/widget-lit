@@ -15,7 +15,6 @@ import '@wainola/lit-widget'
   <HelloWorld msg="Vite + Vue" />
   <widget-test
         widgetApp="Widget App Demo"
-        providerUrl=${this.providerUrl}
         primaryColor="white"
         secondaryColor="violet"
         borderRadius="5px"
