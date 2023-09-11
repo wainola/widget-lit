@@ -47,6 +47,10 @@ export class MyElement extends LitElement {
       <widget-test
         widgetApp="Widget App Demo"
         providerUrl=${this.providerUrl}
+        primaryColor="red"
+        secondaryColor="blue"
+        borderRadius="10px"
+        fontWeight="bold"
       ></widget-test>
       <!-- <widget-test></widget-test> -->
     `;

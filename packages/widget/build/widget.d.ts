@@ -2,6 +2,10 @@ import { LitElement } from 'lit';
 import { EvmWallet } from '@wainola/lit-wallet-manager';
 import { SDKController } from '@wainola/lit-sdk-manager';
 export declare class Widget extends LitElement {
+    primaryColor?: string;
+    secondaryColor?: string;
+    borderRadius?: string;
+    fontWeight?: string;
     widgetApp?: string;
     providerUrl?: string;
     evmWallet: EvmWallet | undefined;

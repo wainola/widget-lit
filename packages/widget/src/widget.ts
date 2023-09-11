@@ -1,4 +1,5 @@
 import { LitElement, html } from 'lit';
+import { styleMap } from 'lit/directives/style-map.js';
 import { customElement, property, state } from 'lit/decorators.js';
 import { EvmWallet } from '@wainola/lit-wallet-manager';
 import { SDKController } from '@wainola/lit-sdk-manager';
@@ -7,6 +8,15 @@ import { Transfer, Fungible, EvmFee } from '@buildwithsygma/sygma-sdk-core';
 
 @customElement('widget-test')
 export class Widget extends LitElement {
+  @property({
+    type: String,
+    hasChanged: (oldValue: string, newValue: string) => oldValue !== newValue
+  })
+  primaryColor?: string;
+  @property({ type: String }) secondaryColor?: string;
+  @property({ type: String }) borderRadius?: string;
+  @property({ type: String }) fontWeight?: string;
+
   @property({
     type: String,
     converter: (value: string | null) => {
@@ -149,8 +159,14 @@ export class Widget extends LitElement {
   }
 
   render() {
+    const styles = {
+      border: `2px solid ${this.primaryColor || ''}`,
+      backgroundColor: this.secondaryColor || '',
+      borderRadius: this.borderRadius || '',
+      fontWeight: this.fontWeight || ''
+    };
     return html`
-      <div>
+      <div style=${styleMap(styles)}>
         <h1>${this.widgetApp}</h1>
 
         <div>
