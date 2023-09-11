@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/wainola/widget-lit/compare/lit-widget-v1.2.0...lit-widget-v1.3.0) (2023-09-11)
+
+
+### Features
+
+* vue local example and custom props ([faef08e](https://github.com/wainola/widget-lit/commit/faef08e5a0c0a3e6301eac9a61eb669a5375b8b0))
+
 ## [1.2.0](https://github.com/wainola/widget-lit/compare/lit-widget-v1.1.0...lit-widget-v1.2.0) (2023-09-10)
 
 
