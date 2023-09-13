@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/wainola/widget-lit/compare/lit-sdk-manager-v1.1.0...lit-sdk-manager-v1.1.1) (2023-09-13)
+
+
+### Miscellaneous
+
+* fixing issues when building dependencies ([caaf82a](https://github.com/wainola/widget-lit/commit/caaf82aa6b97052a329040ff6509bc1ebef676b7))
+
 ## [1.1.0](https://github.com/wainola/widget-lit/compare/lit-sdk-manager-v1.0.0...lit-sdk-manager-v1.1.0) (2023-09-13)
 
 
