@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.0](https://github.com/wainola/widget-lit/compare/lit-widget-v1.3.1...lit-widget-v1.4.0) (2023-09-13)
+
+
+### Features
+
+* composite props and updated examples ([c1289a2](https://github.com/wainola/widget-lit/commit/c1289a2e8a16deb74a48d659053d062dfd4247d3))
+* removing build folder ([3a232bf](https://github.com/wainola/widget-lit/commit/3a232bf24003dfbec4fc9762ee9b2e04a1ff22db))
+
 ## [1.3.1](https://github.com/wainola/widget-lit/compare/lit-widget-v1.3.0...lit-widget-v1.3.1) (2023-09-11)
 
 
