@@ -7,6 +7,25 @@ export declare class Widget extends LitElement {
     borderRadius?: string;
     fontWeight?: string;
     widgetApp?: string;
+    allowedRoutes?: Array<{
+        id: number;
+        name: string;
+    }>;
+    allowedWallets?: Array<{
+        id: string;
+        name: string;
+    }>;
+    defaultFromNetwork?: {
+        id: string;
+        name: string;
+    };
+    resourceList?: Array<{
+        resourceId: string;
+        type: 'fungible' | 'permissionlessGeneric';
+        address: string;
+        symbol: string;
+        decimals: number;
+    }>;
     providerUrl?: string;
     evmWallet: EvmWallet | undefined;
     sdkController: SDKController | undefined;

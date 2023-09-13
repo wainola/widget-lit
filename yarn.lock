@@ -1194,6 +1194,11 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
+"@lit-labs/react@2.0.3":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@lit-labs/react/-/react-2.0.3.tgz#b9c64722bd9e1cc06d7838b2cae08bfae0b5c344"
+  integrity sha512-lSvWbTrbxWqYv/iiOwbAEJfFZrKjO/QjJ4IEXhg43sdD5fNFz4wRXpVsntfVn4DnxpQd+NVRnrsF2USgK0XCTw==
+
 "@lit-labs/ssr-dom-shim@^1.0.0", "@lit-labs/ssr-dom-shim@^1.1.0":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@lit-labs/ssr-dom-shim/-/ssr-dom-shim-1.1.1.tgz#64df34e2f12e68e78ac57e571d25ec07fa460ca9"
@@ -2487,16 +2492,6 @@
   dependencies:
     "@volar/typescript" "~1.10.0"
     "@vue/language-core" "1.8.10"
-
-"@wainola/lit-widget@1.3.1":
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/@wainola/lit-widget/-/lit-widget-1.3.1.tgz#f8ce741d97d0ef3f0bbe5d31f4bc8b1100e52635"
-  integrity sha512-uR0ApOILRIA8FKjKB8PR6CgtH3WFPHF3/OBfYLO/6kRPnYE/YaeJVsiol3ZHMWBP1KpMxN6rfyqgN9iJbUT07g==
-  dependencies:
-    "@buildwithsygma/sygma-sdk-core" "^2.2.0"
-    "@wainola/lit-sdk-manager" "^1.0.0"
-    "@wainola/lit-wallet-manager" "^1.0.0"
-    lit "^2.8.0"
 
 abortcontroller-polyfill@^1.7.3:
   version "1.7.5"
@@ -6160,7 +6155,7 @@ raw-body@2.5.2:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
-react-dom@^18.2.0:
+react-dom@18.2.0, react-dom@^18.2.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.2.0.tgz#22aaf38708db2674ed9ada224ca4aa708d821e3d"
   integrity sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==
@@ -6173,7 +6168,7 @@ react-refresh@^0.14.0:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.14.0.tgz#4e02825378a5f227079554d4284889354e5f553e"
   integrity sha512-wViHqhAd8OHeLS/IRMJjTSDHF3U9eWi62F/MledQGPdJGDhodXJ9PBLNGr6WWL7qlH12Mt3TyTpbS+hGXMjCzQ==
 
-react@^18.2.0:
+react@18.2.0, react@^18.2.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react/-/react-18.2.0.tgz#555bd98592883255fa00de14f1151a917b5d77d5"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==

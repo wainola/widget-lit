@@ -13,6 +13,11 @@ import { ethers } from 'ethers';
 let Widget = class Widget extends LitElement {
     constructor() {
         super();
+        // Composite properties
+        this.allowedRoutes = [];
+        this.allowedWallets = [];
+        this.defaultFromNetwork = { id: '', name: '' };
+        this.resourceList = [];
         this.evmAccount = '';
         this.evmBalance = '';
         this.amountToTransfer = '';
@@ -77,6 +82,7 @@ let Widget = class Widget extends LitElement {
         }
     }
     render() {
+        console.log('Composite properties objects', this.allowedRoutes, this.allowedWallets, this.defaultFromNetwork, this.resourceList);
         const styles = {
             border: `2px solid ${this.primaryColor || ''}`,
             backgroundColor: this.secondaryColor || '',
@@ -157,6 +163,18 @@ __decorate([
         }
     })
 ], Widget.prototype, "widgetApp", void 0);
+__decorate([
+    property({ type: Array })
+], Widget.prototype, "allowedRoutes", void 0);
+__decorate([
+    property({ type: Array })
+], Widget.prototype, "allowedWallets", void 0);
+__decorate([
+    property({ type: Object })
+], Widget.prototype, "defaultFromNetwork", void 0);
+__decorate([
+    property({ type: Array })
+], Widget.prototype, "resourceList", void 0);
 __decorate([
     property({
         type: String,
