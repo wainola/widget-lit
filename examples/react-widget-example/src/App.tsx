@@ -70,11 +70,3 @@ function App() {
 }
 
 export default App;
-
-declare global {
-  module JSX {
-    interface IntrinsicElements {
-      'widget-test': Partial<Widget>;
-    }
-  }
-}
