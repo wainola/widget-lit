@@ -1,13 +1,15 @@
 {
-  "name": "@wainola/lit-widget",
+  "name": "@wainola/lit-widget-monorepo",
   "author": "Wainola",
   "version": "1.0.0",
   "private": true,
   "license": "MIT",
-  "workspaces": [
-    "packages/*",
-    "examples/*"
-  ],
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "examples/*"
+    ]
+  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.6.0",
     "@typescript-eslint/parser": "^6.6.0",
@@ -21,7 +23,7 @@
     "typescript": "^5.2.2"
   },
   "engines": {
-    "node": ">=16.0.0"
+    "node": "^18.16 || >=20"
   },
   "scripts": {
     "build:wallet-manager": "yarn workspace @wainola/lit-wallet-manager clean && yarn workspace @wainola/lit-wallet-manager build",

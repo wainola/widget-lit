@@ -21,6 +21,28 @@ export class Widget extends LitElement {
   })
   widgetApp?: string;
 
+  // Composite properties
+  @property({ type: Array })
+  allowedRoutes?: Array<{
+    id: number;
+    name: string;
+  }> = [];
+
+  @property({ type: Array })
+  allowedWallets?: Array<{ id: string; name: string }> = [];
+
+  @property({ type: Object })
+  defaultFromNetwork?: { id: string; name: string } = { id: '', name: '' };
+
+  @property({ type: Array })
+  resourceList?: Array<{
+    resourceId: string;
+    type: 'fungible' | 'permissionlessGeneric';
+    address: string;
+    symbol: string;
+    decimals: number;
+  }> = [];
+
   @property({
     type: String,
     converter: (value: string | null) => value || null
@@ -155,6 +177,13 @@ export class Widget extends LitElement {
   }
 
   render() {
+    console.log(
+      'Composite properties objects',
+      this.allowedRoutes,
+      this.allowedWallets,
+      this.defaultFromNetwork,
+      this.resourceList
+    );
     const styles = {
       border: `2px solid ${this.primaryColor || ''}`,
       backgroundColor: this.secondaryColor || '',

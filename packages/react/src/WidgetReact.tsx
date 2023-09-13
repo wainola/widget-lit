@@ -1,16 +1,11 @@
-import type { Widget } from '@wainola/lit-widget';
+import { Widget } from '@wainola/lit-widget';
+import { createComponent } from '@lit-labs/react';
 import React from 'react';
 
-export default function WidgetReact(
-  props: JSX.IntrinsicElements['widget-test']
-) {
-  return <widget-test {...props} />;
-}
+const WidgetReact = createComponent({
+  tagName: 'widget-test',
+  elementClass: Widget,
+  react: React
+});
 
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      'widget-test': Partial<Widget>;
-    }
-  }
-}
+export default WidgetReact;

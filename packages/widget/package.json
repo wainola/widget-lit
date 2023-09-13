@@ -8,10 +8,11 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "lit": "^2.8.0",
-    "@wainola/lit-wallet-manager": "^1.0.0",
+    "@buildwithsygma/sygma-sdk-core": "^2.2.0",
     "@wainola/lit-sdk-manager": "^1.0.0",
-    "@buildwithsygma/sygma-sdk-core": "^2.2.0"
+    "@wainola/lit-wallet-manager": "^1.0.0",
+    "lit": "^2.8.0",
+    "ethers": "5.7.2"
   },
   "scripts": {
     "build": "tsc --build --clean && tsc --build ./tsconfig.json",
