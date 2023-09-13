@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/wainola/widget-lit/compare/lit-wallet-manager-v1.1.0...lit-wallet-manager-v1.1.1) (2023-09-13)
+
+
+### Miscellaneous
+
+* change accesor for var ([4632c1e](https://github.com/wainola/widget-lit/commit/4632c1edf98d146b53341ae4163f17c450c71456))
+
 ## [1.1.0](https://github.com/wainola/widget-lit/compare/lit-wallet-manager-v1.0.0...lit-wallet-manager-v1.1.0) (2023-09-13)
 
 
