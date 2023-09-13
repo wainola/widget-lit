@@ -20,7 +20,7 @@
     "@ethersproject/contracts": "^5.7.0",
     "@ethersproject/transactions": "^5.7.0",
     "@polkadot/api": "10.7.2",
-    "@wainola/lit-wallet-manager": "1.0.0",
-    "@wainola/lit-sdk-manager": "1.0.0"
+    "@wainola/lit-sdk-manager": "1.0.0",
+    "@wainola/lit-wallet-manager": "1.0.0"
   }
 }

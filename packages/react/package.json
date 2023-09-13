@@ -5,10 +5,12 @@
   "module": "build/index.js",
   "license": "MIT",
   "dependencies": {
-    "@wainola/lit-widget": "1.3.1",
     "@lit-labs/react": "2.0.3",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "@wainola/lit-widget": "1.3.1"
+  },
+  "peerDependencies": {
+    "react": ">=17",
+    "react-dom": ">=17"
   },
   "scripts": {
     "build": "tsc --build --clean && tsc --build ./tsconfig.json",
