@@ -2,7 +2,7 @@ import { UnsignedTransaction, ethers, providers } from 'ethers';
 
 class EvmWallet {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  private metamask: any | undefined;
+  public metamask: any | undefined;
   private account: string | undefined;
   private provider: ethers.providers.Web3Provider | undefined;
   private balance: string | undefined;
