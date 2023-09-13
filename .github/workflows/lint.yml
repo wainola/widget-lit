@@ -3,31 +3,21 @@ name: "Lint and build"
 on: [pull_request]
 
 jobs:
-  main:
-    name: Lint and build
+  check:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [18]
+      fail-fast: true
     steps:
+      - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          cache: 'yarn'
-          node-version: 18
-          registry-url: 'https://registry.npmjs.org'
-        if: ${{ steps.release.outputs.releases_created }}
-
-      - name: Enable corepack
-        run: corepack enable
-        if: ${{ steps.release.outputs.releases_created }}
-      
-      - name: Install yarn
-        run: yarn set version classic
-        if: ${{ steps.release.outputs.releases_created }}
-
-      - name: Install dependencies
-        run: yarn install
-        if: ${{ steps.release.outputs.releases_created }}
-
-      - run: yarn lint:all
-        if: ${{ steps.release.outputs.releases_created }}
-      
-      - run: yarn build:all
-        if: ${{ steps.release.outputs.releases_created }}
+          cache: 'yarn' # cache node modules
+          node-version: ${{ matrix.node }}
+      - run: corepack enable
+      - run: yarn set version classic
+      - run: yarn
+      - run: yarn run lint:all # lint code
+      - run: yarn run build:all # compile typescript into javascript
