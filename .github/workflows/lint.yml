@@ -29,5 +29,5 @@ jobs:
       - run: yarn lint:all
         if: ${{ steps.release.outputs.releases_created }}
       
-      - run: yarn build
+      - run: yarn build:all
         if: ${{ steps.release.outputs.releases_created }}
