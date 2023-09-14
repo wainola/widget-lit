@@ -25,6 +25,6 @@ jobs:
           node-version: ${{ matrix.node }}
       - run: corepack enable
       - run: yarn set version stable
-      - run: yarn
+      - run: yarn install --inmutable # install dependencies
       - run: yarn run lint:lint:react-widget # lint code
       - run: yarn run build:react # build react
