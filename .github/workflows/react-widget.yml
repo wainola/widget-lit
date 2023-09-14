@@ -1,4 +1,4 @@
-name: Publish Lit Widget to NPM
+name: Publish React Widget to NPM
 
 on:
   push:
