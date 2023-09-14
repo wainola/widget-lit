@@ -1,6 +1,9 @@
 name: "Lint and build SDK Manager"
 
 on:
+  puhs:
+    branches:
+      - main
   pull_request:
     types: [opened, synchronize, reopened]
   paths: # only run on changes to these paths
