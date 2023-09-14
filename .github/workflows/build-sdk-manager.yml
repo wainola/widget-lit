@@ -1,4 +1,4 @@
-name: "Lint and build Widget"
+name: "Lint and build SDK Manager"
 
 on:
   pull_request:
