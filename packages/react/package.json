@@ -1,12 +1,12 @@
 {
   "name": "@wainola/react-widget",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "main": "build/index.js",
   "module": "build/index.js",
   "license": "MIT",
   "dependencies": {
     "@lit-labs/react": "2.0.3",
-    "@wainola/lit-widget": "4.0.0"
+    "@wainola/lit-widget": "4.0.1"
   },
   "peerDependencies": {
     "react": ">=17",
