@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/wainola/widget-lit/compare/lit-wallet-manager-v1.1.4...lit-wallet-manager-v2.0.0) (2023-09-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* Update package.json
+
+### Features
+
+* Update package.json ([799beb7](https://github.com/wainola/widget-lit/commit/799beb7c16ebc903079bf0f12a82632cc833cc15))
+
 ## [1.1.4](https://github.com/wainola/widget-lit/compare/lit-wallet-manager-v1.1.1...lit-wallet-manager-v1.1.2) (2023-09-14)
 
 
