@@ -1,1 +1,1 @@
-export { default as EvmWallet } from './Evm';
+export { EvmWallet } from './Evm';

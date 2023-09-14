@@ -57,4 +57,4 @@ class EvmWallet {
   }
 }
 
-export default EvmWallet;
+export { EvmWallet };
