@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.3](https://github.com/wainola/widget-lit/compare/lit-sdk-manager-v2.0.2...lit-sdk-manager-v2.0.3) (2023-09-14)
+
+
+### Miscellaneous
+
+* Update package.json ([20f0567](https://github.com/wainola/widget-lit/commit/20f0567d0972b666204297d6acea9ee230f6772e))
+
 ## [2.0.0](https://github.com/wainola/widget-lit/compare/lit-sdk-manager-v1.3.3...lit-sdk-manager-v2.0.0) (2023-09-14)
 
 
