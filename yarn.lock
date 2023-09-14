@@ -2394,6 +2394,28 @@
     "@volar/typescript" "~1.10.0"
     "@vue/language-core" "1.8.11"
 
+"@wainola/lit-sdk-manager@2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@wainola/lit-sdk-manager/-/lit-sdk-manager-2.0.1.tgz#812a563354318d41f8a2516bfb15f8567cccd6b4"
+  integrity sha512-aB3GpqUOB6SVfe2ntmRJWE7Y0sKYF9hGQO49QBsp2DN6oxsApgwKYqPLql01AwNY2sGG+vKV56qY+6y8MmUrdA==
+  dependencies:
+    "@buildwithsygma/sygma-sdk-core" "^2.2.0"
+    "@ethersproject/contracts" "^5.7.0"
+    "@ethersproject/transactions" "^5.7.0"
+    "@polkadot/api" "10.7.2"
+    "@wainola/lit-wallet-manager" "2.1.0"
+
+"@wainola/lit-widget@4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@wainola/lit-widget/-/lit-widget-4.0.0.tgz#6d0a671c08cf6c97d3e5459f5028cc623213b141"
+  integrity sha512-KizV+6fIR5cLfrfuRFJZm1aFg26qd8T2yA4c8NnLUme0lP9xixkYwGlsrtwW7NHfJrU/objC+PbArdzD5Z3hqg==
+  dependencies:
+    "@buildwithsygma/sygma-sdk-core" "^2.2.0"
+    "@wainola/lit-sdk-manager" "2.0.1"
+    "@wainola/lit-wallet-manager" "2.1.0"
+    ethers "5.7.2"
+    lit "^2.8.0"
+
 abortcontroller-polyfill@^1.7.3:
   version "1.7.5"
   resolved "https://registry.yarnpkg.com/abortcontroller-polyfill/-/abortcontroller-polyfill-1.7.5.tgz#6738495f4e901fbb57b6c0611d0c75f76c485bed"
