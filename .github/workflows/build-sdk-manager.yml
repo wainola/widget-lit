@@ -29,4 +29,5 @@ jobs:
       - run: yarn cache clean
       - run: yarn install
       - run: yarn run lint:all # lint code
+      - run: yarn run build:wallet-manager
       - run: yarn run build:sdk-manager # compile typescript into javascript
