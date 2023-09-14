@@ -26,7 +26,7 @@ jobs:
           node-version: ${{ matrix.node }}
       - run: corepack enable
       - run: yarn set version classic
-      - run: yarn clean cache
+      - run: yarn cache clean
       - run: yarn install
       - run: yarn run lint:all # lint code
       - run: yarn run build:sdk-manager # compile typescript into javascript
