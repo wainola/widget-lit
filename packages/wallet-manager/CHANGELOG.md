@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/wainola/widget-lit/compare/lit-wallet-manager-v2.0.0...lit-wallet-manager-v2.1.0) (2023-09-14)
+
+
+### Features
+
+* Update Evm.ts ([ff5557b](https://github.com/wainola/widget-lit/commit/ff5557b13e8005e8cf1c1fe9eb65f57ebcc8f9c0))
+
 ## [2.0.0](https://github.com/wainola/widget-lit/compare/lit-wallet-manager-v1.1.4...lit-wallet-manager-v2.0.0) (2023-09-14)
 
 
