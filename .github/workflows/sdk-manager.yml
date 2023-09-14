@@ -1,4 +1,4 @@
-name: Publish Lit Wallet Manager to NPM
+name: Publish Lit SDK Manager to NPM
 
 on:
   push:
