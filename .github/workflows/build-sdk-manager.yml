@@ -1,6 +1,13 @@
-name: "Lint and build"
+name: "Lint and build SDK Manager"
 
-on: [pull_request]
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  paths: # only run on changes to these paths
+    - 'packages/sdk-manager/**'
+    - '!packages/wallet-manager/**'
+    - '!packages/widget/**'
+    - '!packages/react/**'
 
 jobs:
   check:
