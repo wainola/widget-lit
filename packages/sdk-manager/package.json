@@ -1,6 +1,6 @@
 {
   "name": "@wainola/lit-sdk-manager",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "main": "build/index.js",
   "module": "build/index.js",
   "license": "MIT",
@@ -20,6 +20,6 @@
     "@ethersproject/contracts": "^5.7.0",
     "@ethersproject/transactions": "^5.7.0",
     "@polkadot/api": "10.7.2",
-    "@wainola/lit-wallet-manager": "2.1.0"
+    "@wainola/lit-wallet-manager": "2.1.1"
   }
 }

@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.1](https://github.com/wainola/widget-lit/compare/lit-wallet-manager-v2.1.0...lit-wallet-manager-v2.1.1) (2023-09-14)
+
+
+### Miscellaneous
+
+* pipelines to check build of artifacts ([7ece16d](https://github.com/wainola/widget-lit/commit/7ece16dd40e4bdf042b9ea0d7c0cde5300529443))
+
 ## [2.1.0](https://github.com/wainola/widget-lit/compare/lit-wallet-manager-v2.0.0...lit-wallet-manager-v2.1.0) (2023-09-14)
 
 

@@ -3060,7 +3060,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wainola/lit-sdk-manager@2.0.2, @wainola/lit-sdk-manager@workspace:packages/sdk-manager":
+"@wainola/lit-sdk-manager@2.0.3, @wainola/lit-sdk-manager@workspace:packages/sdk-manager":
   version: 0.0.0-use.local
   resolution: "@wainola/lit-sdk-manager@workspace:packages/sdk-manager"
   dependencies:
@@ -3069,12 +3069,25 @@ __metadata:
     "@ethersproject/transactions": ^5.7.0
     "@polkadot/api": 10.7.2
     "@polkadot/types": 10.7.2
-    "@wainola/lit-wallet-manager": 2.1.0
+    "@wainola/lit-wallet-manager": 2.1.1
     typescript: ^5.2.2
   languageName: unknown
   linkType: soft
 
-"@wainola/lit-wallet-manager@2.1.0, @wainola/lit-wallet-manager@workspace:packages/wallet-manager":
+"@wainola/lit-sdk-manager@npm:2.0.1":
+  version: 2.0.1
+  resolution: "@wainola/lit-sdk-manager@npm:2.0.1"
+  dependencies:
+    "@buildwithsygma/sygma-sdk-core": ^2.2.0
+    "@ethersproject/contracts": ^5.7.0
+    "@ethersproject/transactions": ^5.7.0
+    "@polkadot/api": 10.7.2
+    "@wainola/lit-wallet-manager": 2.1.0
+  checksum: 84e8e02f5b5196529fe032cf851630990f913fefea28f70c10ed2e365f38502d8af006a813ecda89d2ec686b2add4e64da88b0d1fa62c1b0a5c2c53bd65abee8
+  languageName: node
+  linkType: hard
+
+"@wainola/lit-wallet-manager@2.1.1, @wainola/lit-wallet-manager@workspace:packages/wallet-manager":
   version: 0.0.0-use.local
   resolution: "@wainola/lit-wallet-manager@workspace:packages/wallet-manager"
   dependencies:
@@ -3085,6 +3098,17 @@ __metadata:
     typescript: ^5.2.2
   languageName: unknown
   linkType: soft
+
+"@wainola/lit-wallet-manager@npm:2.1.0":
+  version: 2.1.0
+  resolution: "@wainola/lit-wallet-manager@npm:2.1.0"
+  dependencies:
+    "@polkadot/api": 10.7.2
+    "@polkadot/extension-dapp": ^0.46.5
+    ethers: 5.7.2
+  checksum: 849aaa0c42fb3b58b9a5821f20f30eab0bf2fecf9e540c8c9765e16000f81c3f9f577c303af059eeb0ff16c98f7324c1e24981df1f46b9f87b8ab694542d8bc5
+  languageName: node
+  linkType: hard
 
 "@wainola/lit-widget-monorepo@workspace:.":
   version: 0.0.0-use.local
@@ -3108,8 +3132,8 @@ __metadata:
   resolution: "@wainola/lit-widget@workspace:packages/widget"
   dependencies:
     "@buildwithsygma/sygma-sdk-core": ^2.2.0
-    "@wainola/lit-sdk-manager": 2.0.2
-    "@wainola/lit-wallet-manager": 2.1.0
+    "@wainola/lit-sdk-manager": 2.0.3
+    "@wainola/lit-wallet-manager": 2.1.1
     ethers: 5.7.2
     lit: ^2.8.0
     typescript: ^5.2.2

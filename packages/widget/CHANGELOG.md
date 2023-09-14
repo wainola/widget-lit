@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.0.1](https://github.com/wainola/widget-lit/compare/lit-widget-v4.0.0...lit-widget-v4.0.1) (2023-09-14)
+
+
+### Miscellaneous
+
+* migration to yarn v3 ([0e7a7c1](https://github.com/wainola/widget-lit/commit/0e7a7c159702907c76b2af616706d7d3af90404f))
+* pipelines to check build of artifacts ([7ece16d](https://github.com/wainola/widget-lit/commit/7ece16dd40e4bdf042b9ea0d7c0cde5300529443))
+
 ## [4.0.0](https://github.com/wainola/widget-lit/compare/lit-widget-v3.0.0...lit-widget-v4.0.0) (2023-09-14)
 
 
