@@ -1,13 +1,5 @@
 # Changelog
 
-## [2.0.2](https://github.com/wainola/widget-lit/compare/lit-sdk-manager-v2.0.1...lit-sdk-manager-v2.0.2) (2023-09-14)
-
-
-### Miscellaneous
-
-* bump dependency and update lock file ([cbadef5](https://github.com/wainola/widget-lit/commit/cbadef564dc7befd9ed5e9826b45944454a68da8))
-* Update package.json ([245d83f](https://github.com/wainola/widget-lit/commit/245d83f12b490bcbe6a59c9ec89b38d0b7c50ca8))
-
 ## [2.0.0](https://github.com/wainola/widget-lit/compare/lit-sdk-manager-v1.3.3...lit-sdk-manager-v2.0.0) (2023-09-14)
 
 
