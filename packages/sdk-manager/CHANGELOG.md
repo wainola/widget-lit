@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.3.1](https://github.com/wainola/widget-lit/compare/lit-sdk-manager-v1.3.0...lit-sdk-manager-v1.3.1) (2023-09-14)
+## [1.3.3](https://github.com/wainola/widget-lit/compare/lit-sdk-manager-v1.3.0...lit-sdk-manager-v1.3.1) (2023-09-14)
 
 
 ### Miscellaneous
