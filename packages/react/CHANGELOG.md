@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/wainola/widget-lit/compare/react-widget-v1.1.0...react-widget-v1.1.1) (2023-09-14)
+
+
+### Miscellaneous
+
+* updates ([4da49e9](https://github.com/wainola/widget-lit/commit/4da49e9c7ac551a5c5fd2071b89651bf8823a64e))
+
 ## [1.1.0](https://github.com/wainola/widget-lit/compare/react-widget-v1.0.0...react-widget-v1.1.0) (2023-09-14)
 
 
