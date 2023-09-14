@@ -3069,7 +3069,7 @@ __metadata:
     "@ethersproject/transactions": ^5.7.0
     "@polkadot/api": 10.7.2
     "@polkadot/types": 10.7.2
-    "@wainola/lit-wallet-manager": 2.1.0
+    "@wainola/lit-wallet-manager": 2.1.1
     typescript: ^5.2.2
   languageName: unknown
   linkType: soft
@@ -3087,18 +3087,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wainola/lit-wallet-manager@npm:2.1.0":
-  version: 2.1.0
-  resolution: "@wainola/lit-wallet-manager@npm:2.1.0"
-  dependencies:
-    "@polkadot/api": 10.7.2
-    "@polkadot/extension-dapp": ^0.46.5
-    ethers: 5.7.2
-  checksum: 849aaa0c42fb3b58b9a5821f20f30eab0bf2fecf9e540c8c9765e16000f81c3f9f577c303af059eeb0ff16c98f7324c1e24981df1f46b9f87b8ab694542d8bc5
-  languageName: node
-  linkType: hard
-
-"@wainola/lit-wallet-manager@workspace:packages/wallet-manager":
+"@wainola/lit-wallet-manager@2.1.1, @wainola/lit-wallet-manager@workspace:packages/wallet-manager":
   version: 0.0.0-use.local
   resolution: "@wainola/lit-wallet-manager@workspace:packages/wallet-manager"
   dependencies:
@@ -3109,6 +3098,17 @@ __metadata:
     typescript: ^5.2.2
   languageName: unknown
   linkType: soft
+
+"@wainola/lit-wallet-manager@npm:2.1.0":
+  version: 2.1.0
+  resolution: "@wainola/lit-wallet-manager@npm:2.1.0"
+  dependencies:
+    "@polkadot/api": 10.7.2
+    "@polkadot/extension-dapp": ^0.46.5
+    ethers: 5.7.2
+  checksum: 849aaa0c42fb3b58b9a5821f20f30eab0bf2fecf9e540c8c9765e16000f81c3f9f577c303af059eeb0ff16c98f7324c1e24981df1f46b9f87b8ab694542d8bc5
+  languageName: node
+  linkType: hard
 
 "@wainola/lit-widget-monorepo@workspace:.":
   version: 0.0.0-use.local
