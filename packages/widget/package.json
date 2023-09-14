@@ -11,8 +11,8 @@
     "@buildwithsygma/sygma-sdk-core": "^2.2.0",
     "@wainola/lit-sdk-manager": "2.0.2",
     "@wainola/lit-wallet-manager": "2.1.0",
-    "lit": "^2.8.0",
-    "ethers": "5.7.2"
+    "ethers": "5.7.2",
+    "lit": "^2.8.0"
   },
   "scripts": {
     "build": "tsc --build --clean && tsc --build ./tsconfig.json",

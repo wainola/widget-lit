@@ -17,6 +17,6 @@ jobs:
           cache: 'yarn' # cache node modules
           node-version: ${{ matrix.node }}
       - run: corepack enable
-      - run: yarn set version classic
+      - run: yarn set version stable
       - run: yarn
       - run: yarn run lint:all # lint code
