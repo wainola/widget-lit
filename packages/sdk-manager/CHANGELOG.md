@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.4](https://github.com/wainola/widget-lit/compare/lit-sdk-manager-v2.0.3...lit-sdk-manager-v2.0.4) (2023-09-14)
+
+
+### Miscellaneous
+
+* update lock and rebase with main ([183cd83](https://github.com/wainola/widget-lit/commit/183cd8335e53c7ff2bfd4174160c2b1492530e93))
+
 ## [2.0.0](https://github.com/wainola/widget-lit/compare/lit-sdk-manager-v1.3.3...lit-sdk-manager-v2.0.0) (2023-09-14)
 
 
