@@ -50,9 +50,9 @@ export class Widget extends LitElement {
   providerUrl?: string;
 
   @state()
-  evmWallet: EvmWallet | undefined;
+  evmWallet?: EvmWallet;
 
-  sdkController: SDKController | undefined;
+  sdkController?: SDKController;
 
   constructor() {
     super();

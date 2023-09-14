@@ -5,11 +5,11 @@ import { formatBalance } from '@polkadot/util';
 formatBalance.setDefaults({ unit: 'DOT' });
 
 class Substrate {
-  private substrateAccount: string | undefined;
-  public api: ApiPromise | undefined;
-  private wssProvider: WsProvider | undefined;
+  substrateAccount?: string;
+  api?: ApiPromise;
+  wssProvider?: WsProvider;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  private balance: any | undefined;
+  balance?: any;
 
   public async connect() {
     const injectors = await web3Enable('Polkadot Wallet');
