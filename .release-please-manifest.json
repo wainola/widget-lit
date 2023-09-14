@@ -2,5 +2,5 @@
   "packages/sdk-manager": "2.0.2",
   "packages/wallet-manager": "2.1.0",
   "packages/widget": "4.0.1",
-  "packages/react": "1.1.0"
+  "packages/react": "1.1.2"
 }
