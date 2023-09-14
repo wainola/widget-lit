@@ -17,5 +17,9 @@
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
     "vue-tsc": "^1.8.5"
+  },
+  "peerDependencies": {
+    "@wainola/lit-sdk-manager": "1.1.0",
+    "@wainola/lit-wallet-manager": "1.1.1"
   }
 }
