@@ -3060,6 +3060,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@wainola/lit-sdk-manager@2.0.3, @wainola/lit-sdk-manager@workspace:packages/sdk-manager":
+  version: 0.0.0-use.local
+  resolution: "@wainola/lit-sdk-manager@workspace:packages/sdk-manager"
+  dependencies:
+    "@buildwithsygma/sygma-sdk-core": ^2.2.0
+    "@ethersproject/contracts": ^5.7.0
+    "@ethersproject/transactions": ^5.7.0
+    "@polkadot/api": 10.7.2
+    "@polkadot/types": 10.7.2
+    "@wainola/lit-wallet-manager": 2.1.1
+    typescript: ^5.2.2
+  languageName: unknown
+  linkType: soft
+
 "@wainola/lit-sdk-manager@npm:2.0.1":
   version: 2.0.1
   resolution: "@wainola/lit-sdk-manager@npm:2.0.1"
@@ -3073,34 +3087,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wainola/lit-sdk-manager@npm:2.0.3":
-  version: 2.0.3
-  resolution: "@wainola/lit-sdk-manager@npm:2.0.3"
-  dependencies:
-    "@buildwithsygma/sygma-sdk-core": ^2.2.0
-    "@ethersproject/contracts": ^5.7.0
-    "@ethersproject/transactions": ^5.7.0
-    "@polkadot/api": 10.7.2
-    "@wainola/lit-wallet-manager": 2.1.1
-  checksum: 0d50f0b7ee3dc0a5cff1fc4ee4e39e161b8dd5c27662a23af6ddc7f0edae76222adf1cf7a2578b14558dd1203bd875431d4eaaaf44cddae477e122f140fc0a58
-  languageName: node
-  linkType: hard
-
-"@wainola/lit-sdk-manager@workspace:packages/sdk-manager":
-  version: 0.0.0-use.local
-  resolution: "@wainola/lit-sdk-manager@workspace:packages/sdk-manager"
-  dependencies:
-    "@buildwithsygma/sygma-sdk-core": ^2.2.0
-    "@ethersproject/contracts": ^5.7.0
-    "@ethersproject/transactions": ^5.7.0
-    "@polkadot/api": 10.7.2
-    "@polkadot/types": 10.7.2
-    "@wainola/lit-wallet-manager": 2.1.0
-    typescript: ^5.2.2
-  languageName: unknown
-  linkType: soft
-
-"@wainola/lit-wallet-manager@2.1.0, @wainola/lit-wallet-manager@workspace:packages/wallet-manager":
+"@wainola/lit-wallet-manager@2.1.1, @wainola/lit-wallet-manager@workspace:packages/wallet-manager":
   version: 0.0.0-use.local
   resolution: "@wainola/lit-wallet-manager@workspace:packages/wallet-manager"
   dependencies:
@@ -3112,14 +3099,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@wainola/lit-wallet-manager@npm:2.1.1":
-  version: 2.1.1
-  resolution: "@wainola/lit-wallet-manager@npm:2.1.1"
+"@wainola/lit-wallet-manager@npm:2.1.0":
+  version: 2.1.0
+  resolution: "@wainola/lit-wallet-manager@npm:2.1.0"
   dependencies:
     "@polkadot/api": 10.7.2
     "@polkadot/extension-dapp": ^0.46.5
     ethers: 5.7.2
-  checksum: 8b1f4c207b26f1fa04994e2efa2a9080c877ac004d1b0f5ae49a4642ed4174c79fe8f7453b2eff39b26b01b41d8dc91a5879b938a13d2a24d1aa74396382da6a
+  checksum: 849aaa0c42fb3b58b9a5821f20f30eab0bf2fecf9e540c8c9765e16000f81c3f9f577c303af059eeb0ff16c98f7324c1e24981df1f46b9f87b8ab694542d8bc5
   languageName: node
   linkType: hard
 
