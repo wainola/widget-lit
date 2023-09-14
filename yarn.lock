@@ -3060,20 +3060,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wainola/lit-sdk-manager@2.0.2, @wainola/lit-sdk-manager@workspace:packages/sdk-manager":
-  version: 0.0.0-use.local
-  resolution: "@wainola/lit-sdk-manager@workspace:packages/sdk-manager"
-  dependencies:
-    "@buildwithsygma/sygma-sdk-core": ^2.2.0
-    "@ethersproject/contracts": ^5.7.0
-    "@ethersproject/transactions": ^5.7.0
-    "@polkadot/api": 10.7.2
-    "@polkadot/types": 10.7.2
-    "@wainola/lit-wallet-manager": 2.1.0
-    typescript: ^5.2.2
-  languageName: unknown
-  linkType: soft
-
 "@wainola/lit-sdk-manager@npm:2.0.1":
   version: 2.0.1
   resolution: "@wainola/lit-sdk-manager@npm:2.0.1"
@@ -3087,6 +3073,33 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@wainola/lit-sdk-manager@npm:2.0.3":
+  version: 2.0.3
+  resolution: "@wainola/lit-sdk-manager@npm:2.0.3"
+  dependencies:
+    "@buildwithsygma/sygma-sdk-core": ^2.2.0
+    "@ethersproject/contracts": ^5.7.0
+    "@ethersproject/transactions": ^5.7.0
+    "@polkadot/api": 10.7.2
+    "@wainola/lit-wallet-manager": 2.1.1
+  checksum: 0d50f0b7ee3dc0a5cff1fc4ee4e39e161b8dd5c27662a23af6ddc7f0edae76222adf1cf7a2578b14558dd1203bd875431d4eaaaf44cddae477e122f140fc0a58
+  languageName: node
+  linkType: hard
+
+"@wainola/lit-sdk-manager@workspace:packages/sdk-manager":
+  version: 0.0.0-use.local
+  resolution: "@wainola/lit-sdk-manager@workspace:packages/sdk-manager"
+  dependencies:
+    "@buildwithsygma/sygma-sdk-core": ^2.2.0
+    "@ethersproject/contracts": ^5.7.0
+    "@ethersproject/transactions": ^5.7.0
+    "@polkadot/api": 10.7.2
+    "@polkadot/types": 10.7.2
+    "@wainola/lit-wallet-manager": 2.1.0
+    typescript: ^5.2.2
+  languageName: unknown
+  linkType: soft
+
 "@wainola/lit-wallet-manager@2.1.0, @wainola/lit-wallet-manager@workspace:packages/wallet-manager":
   version: 0.0.0-use.local
   resolution: "@wainola/lit-wallet-manager@workspace:packages/wallet-manager"
@@ -3098,6 +3111,17 @@ __metadata:
     typescript: ^5.2.2
   languageName: unknown
   linkType: soft
+
+"@wainola/lit-wallet-manager@npm:2.1.1":
+  version: 2.1.1
+  resolution: "@wainola/lit-wallet-manager@npm:2.1.1"
+  dependencies:
+    "@polkadot/api": 10.7.2
+    "@polkadot/extension-dapp": ^0.46.5
+    ethers: 5.7.2
+  checksum: 8b1f4c207b26f1fa04994e2efa2a9080c877ac004d1b0f5ae49a4642ed4174c79fe8f7453b2eff39b26b01b41d8dc91a5879b938a13d2a24d1aa74396382da6a
+  languageName: node
+  linkType: hard
 
 "@wainola/lit-widget-monorepo@workspace:.":
   version: 0.0.0-use.local
@@ -3121,8 +3145,8 @@ __metadata:
   resolution: "@wainola/lit-widget@workspace:packages/widget"
   dependencies:
     "@buildwithsygma/sygma-sdk-core": ^2.2.0
-    "@wainola/lit-sdk-manager": 2.0.2
-    "@wainola/lit-wallet-manager": 2.1.0
+    "@wainola/lit-sdk-manager": 2.0.3
+    "@wainola/lit-wallet-manager": 2.1.1
     ethers: 5.7.2
     lit: ^2.8.0
     typescript: ^5.2.2
