@@ -52,6 +52,9 @@ jobs:
       - name: Install dependencies
         run: yarn install
         if: ${{ steps.release.outputs.releases_created }}
+        
+      - run: yarn build:all
+        if: ${{ steps.release.outputs.releases_created }}
 
       - run: yarn build:react-widget
         if: ${{ steps.release.outputs.releases_created }}
