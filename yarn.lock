@@ -3074,19 +3074,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@wainola/lit-sdk-manager@npm:2.0.1":
-  version: 2.0.1
-  resolution: "@wainola/lit-sdk-manager@npm:2.0.1"
-  dependencies:
-    "@buildwithsygma/sygma-sdk-core": ^2.2.0
-    "@ethersproject/contracts": ^5.7.0
-    "@ethersproject/transactions": ^5.7.0
-    "@polkadot/api": 10.7.2
-    "@wainola/lit-wallet-manager": 2.1.0
-  checksum: 84e8e02f5b5196529fe032cf851630990f913fefea28f70c10ed2e365f38502d8af006a813ecda89d2ec686b2add4e64da88b0d1fa62c1b0a5c2c53bd65abee8
-  languageName: node
-  linkType: hard
-
 "@wainola/lit-wallet-manager@2.1.0, @wainola/lit-wallet-manager@workspace:packages/wallet-manager":
   version: 0.0.0-use.local
   resolution: "@wainola/lit-wallet-manager@workspace:packages/wallet-manager"
@@ -3116,7 +3103,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@wainola/lit-widget@*, @wainola/lit-widget@workspace:packages/widget":
+"@wainola/lit-widget@*, @wainola/lit-widget@4.0.1, @wainola/lit-widget@workspace:packages/widget":
   version: 0.0.0-use.local
   resolution: "@wainola/lit-widget@workspace:packages/widget"
   dependencies:
@@ -3129,25 +3116,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@wainola/lit-widget@npm:4.0.0":
-  version: 4.0.0
-  resolution: "@wainola/lit-widget@npm:4.0.0"
-  dependencies:
-    "@buildwithsygma/sygma-sdk-core": ^2.2.0
-    "@wainola/lit-sdk-manager": 2.0.1
-    "@wainola/lit-wallet-manager": 2.1.0
-    ethers: 5.7.2
-    lit: ^2.8.0
-  checksum: 83ed61c0b95a1887db64c7c64dda69422d7e3a8fb35877ce5657982973eadd557cdedcf9ecdf964b2fd370d0a322d86a4c6be76fa430326d2c0e394e61ff130a
-  languageName: node
-  linkType: hard
-
 "@wainola/react-widget@*, @wainola/react-widget@workspace:packages/react":
   version: 0.0.0-use.local
   resolution: "@wainola/react-widget@workspace:packages/react"
   dependencies:
     "@lit-labs/react": 2.0.3
-    "@wainola/lit-widget": 4.0.0
+    "@wainola/lit-widget": 4.0.1
   peerDependencies:
     react: ">=17"
     react-dom: ">=17"
