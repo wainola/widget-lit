@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/wainola/widget-lit/compare/react-widget-v1.1.1...react-widget-v1.1.2) (2023-09-14)
+
+
+### Miscellaneous
+
+* pipelines to check build of artifacts ([7ece16d](https://github.com/wainola/widget-lit/commit/7ece16dd40e4bdf042b9ea0d7c0cde5300529443))
+
 ## [1.1.1](https://github.com/wainola/widget-lit/compare/react-widget-v1.1.0...react-widget-v1.1.1) (2023-09-14)
 
 
